@@ -27,9 +27,11 @@ if(!empty($_GET["action"]))
 
 			if(!empty($_SESSION["cart_item"])) {
 				if(in_array($productByid[0]["code_article"],$_SESSION["cart_item"])) {
-					foreach($_SESSION["cart_item"] as $k) {
+					foreach($_SESSION["cart_item"] as $k => $v) {
 						if($productByid[0]["code_article"] == $k) {
 							if(empty($_SESSION["cart_item"][$k]["quantity"])) {
+
+								echo '<1h>Empty cart</h1>';
 								$_SESSION["cart_item"][$k]["quantity"] = 0;
 							}
 							$_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];

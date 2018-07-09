@@ -41,8 +41,9 @@ case "delete":
         break;
 
     }
-} 
-$commande = $DB->query("SELECT * FROM commande INNER JOIN musique ON commande.code_article = musique.code_article");
+} //WHERE a ajouter id_client
+$commande = $DB->query("SELECT * FROM commande INNER JOIN musique ON commande.code_article = musique.code_article WHERE id_client='" . $_SESSION["id"] . "' GROUP BY num_commande "
+);
 $commande = $commande->fetchAll();
 
 foreach ($commande as $cd) {
@@ -140,10 +141,10 @@ $random_string = chr(rand(65,90)) . chr(rand(65,90)) . chr(rand(65,90)) . chr(ra
       <?php if($achat >0)
       {
       foreach ($commande as $cd)
-        { echo '<a href="commandes.php?num_commande='.$cd['num_commande'].'">'.($cd["num_commande"]).'<br>';
+        { echo '<a href="commandes.php?num_commande='.$cd['num_commande'].'">'.($cd["num_commande"]).'</a>'.'<br>';
         }
       }else{
-        echo "Vous n'avez pas passé de commande." ;}?>
+        echo "Vous n'avez pas passé de commande.";}?>
     </div>
 	</div>
 
