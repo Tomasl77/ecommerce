@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 02 juil. 2018 à 14:20
+-- Généré le :  lun. 09 juil. 2018 à 15:01
 -- Version du serveur :  5.7.21
 -- Version de PHP :  7.2.4
 
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `client` (
   `tel_client` int(11) NOT NULL,
   `password` varchar(64) NOT NULL,
   PRIMARY KEY (`id_client`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `client`
@@ -99,14 +99,37 @@ INSERT INTO `client` (`id_client`, `nom_client`, `prenom_client`, `adresse_clien
 (2, 'LOBGOEIS', 'Tomas', '87 rue du caca', 99875, 'Jouarre', 'cacaprout@gmail.com', 123456789, '$2a$10$1qAz2wSx3eDc4rFv5tGb5ezJZReL9P9Oq6L/Q0aBK7VNBp0tD9UBa'),
 (4, 'Pouet', 'Prout', '25 avenue de rebaise', 77640, 'Jouarre', 'lolo@gmail.com', 105040404, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eVXs6SAsPHIksDVv8FSYU2bTPpO0y.4S'),
 (5, 'Lob', 'TOm', '25 avenue de rebaisa', 77450, 'Jouaua', 'fe@gmail.com', 160228745, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eHFdOt9SbFga9sgeluhOsCJJgFoujup2'),
-(11, 'Emi', 'Emi', '25 Avenue de Rebais', 77640, 'Jouarre', 'emi@gmail.com', 44444, '$2a$10$1qAz2wSx3eDc4rFv5tGb5e7cCeVryvX.fgwPY3vPHP63qzM848wEK'),
+(11, 'Tomas', 'Lobgeois', '25 Avenue de rebais', 77640, 'Jouarre', 'emi@gmail.com', 44444, '$2a$10$1qAz2wSx3eDc4rFv5tGb5e7cCeVryvX.fgwPY3vPHP63qzM848wEK'),
 (14, 'Lolo', 'Lolo', 'Lolo', 5, 'Lolo', 'lolo2@gmail.com', 160228787, '$2a$10$1qAz2wSx3eDc4rFv5tGb5e7cCeVryvX.fgwPY3vPHP63qzM848wEK'),
 (15, 'Lo', 'Lo', 'Lo', 4, 'Lo', 'lo@gmail.com', 154896548, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eeuK5Eje4/K1.HJwfO1X5PcE0uHurPlK'),
 (16, 'Lol', 'Lol', 'Lol', 7, 'Lol', 'lol@gmail.com', 7, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eKlOEANnVlwh3jtBPpTebweC9XwTT.m2'),
 (17, 'Lololo', 'Lololo', 'Lolo', 4, 'Lolo', 'lololo@gmail.com', 5, '$2a$10$1qAz2wSx3eDc4rFv5tGb5e7cCeVryvX.fgwPY3vPHP63qzM848wEK'),
 (18, 'R', 'E', 'Lo', 4, 'Lo', 'r@gmail.com', 4, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eeuK5Eje4/K1.HJwfO1X5PcE0uHurPlK'),
 (19, 'V', 'V', 'Lo', 4, 'Lo', 'loa@gmail.com', 4, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eeuK5Eje4/K1.HJwfO1X5PcE0uHurPlK'),
-(21, 'Manianga', 'Roy', '25 avenue de roy', 77777, 'Roycity', 'roy@gmail.com', 258965874, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eVwbSn341dlDu5rVs3el2YsEFllDGthe');
+(21, 'Manianga', 'Roy', '25 avenue de roy', 77777, 'Roycity', 'roy@gmail.com', 258965874, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eVwbSn341dlDu5rVs3el2YsEFllDGthe'),
+(23, 'Noblet', 'Manon', '1 Avenue des champs', 75001, 'Paris', 'manon@gmail.com', 160606060, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eVXs6SAsPHIksDVv8FSYU2bTPpO0y.4S'),
+(24, 'Lolo', 'Lolo', 'Lo', 77, 'Lo', 'po@gmail.com', 77, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eeuK5Eje4/K1.HJwfO1X5PcE0uHurPlK'),
+(25, 'Lolo', 'Lolo', 'Lo', 77, 'Lo', 'pod@gmail.com', 77, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(26, 'Lolo', 'Lolo', 'Lo', 77, 'Lo', 'pdod@gmail.com', 77, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(27, 'Lolo', 'Lolo', 'Lo', 77, 'Lo', 'pdodd@gmail.com', 77, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(28, 'Lolo', 'Lolo', 'Lo', 77, 'Lo', 'pddodd@gmail.com', 77, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(29, 'Lolo', 'Lolo', 'Lo', 77, 'Lo', 'pdddodd@gmail.com', 77, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(30, 'Efe', 'Cc', 'Lo', 77, 'Lo', 'pdddoddd@gmail.com', 77, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(31, 'Efe', 'Cc', 'Lo', 77, 'Lo', 'pdddodddd@gmail.com', 77, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(32, 'Lolo', 'Lolo', 'Lolo', 77777, 'Lolo', 'glee@gmail.com', 7777, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(33, 'Lolo', 'Lolo', 'Lolo', 77777, 'Lolo', 'gleed@gmail.com', 7777, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(34, 'Lolo', 'Lolo', 'Lolo', 77777, 'Lolo', 'popo@gmail.com', 7777777, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(35, 'Lolo', 'Lolo', 'Lolo', 77777, 'Lolo', 'poxdpo@gmail.com', 7777777, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(36, 'Lolo', 'Lolo', 'Lolo', 77777, 'Lolo', 'poexdpo@gmail.com', 7777777, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(37, 'Lolo', 'Lolo', 'Lolo', 77777, 'Lolo', 'poxadpo@gmail.com', 7777777, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(38, 'Lolo', 'Lolo', 'Lolo', 77777, 'Lolo', 'poooooopo@gmail.com', 7777777, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(39, 'Lolo', 'Lolo', 'Lolo', 77777, 'Lolo', 'paooopo@gmail.com', 7777777, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(40, 'Lolo', 'Lolo', 'Lolo', 77777, 'Lolo', 'paoopo@gmail.com', 7777777, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(41, 'Ytfuijkl', 'Zerzer', 'Zaeraze', 12345, 'Eazerazer', 'zerzetr@gmail.com', 123456789, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(42, 'Ytfuijkl', 'Zerzer', 'Zaeraze', 12345, 'Eazerazer', 'zzerzetr@gmail.com', 123456789, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(43, 'Zerzer', 'Zerzer', 'Uzyetr', 12345, 'Zeuirt', 'zerzerfds@gmail.com', 123456878, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(44, 'Zerzer', 'Zerzer', 'Uzyetr', 12345, 'Zeuirt', 'zerzsderfds@gmail.com', 123456878, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi'),
+(45, 'Ytfuijkl', 'Zerzer', 'Zaeraze', 12345, 'Eazerazer', 'zzerdzetr@gmail.com', 123456789, '$2a$10$1qAz2wSx3eDc4rFv5tGb5eU2bvOJ5AZs2DJ3yNSsvzDKyZ235iKTi');
 
 -- --------------------------------------------------------
 
@@ -118,19 +141,21 @@ DROP TABLE IF EXISTS `commande`;
 CREATE TABLE IF NOT EXISTS `commande` (
   `id_commande` int(11) NOT NULL AUTO_INCREMENT,
   `id_client` int(11) NOT NULL,
-  `date_commande` date NOT NULL,
-  `id_paiement` int(11) NOT NULL,
   `prix_commande` int(11) NOT NULL,
+  `code_article` varchar(64) NOT NULL,
+  `date_commande` datetime NOT NULL,
+  `num_commande` varchar(64) NOT NULL,
   PRIMARY KEY (`id_commande`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `commande`
 --
 
-INSERT INTO `commande` (`id_commande`, `id_client`, `date_commande`, `id_paiement`, `prix_commande`) VALUES
-(1, 11, '2018-07-02', 1, 75),
-(2, 21, '2018-07-02', 2, 65);
+INSERT INTO `commande` (`id_commande`, `id_client`, `prix_commande`, `code_article`, `date_commande`, `num_commande`) VALUES
+(125, 11, 10, 'e4', '2018-07-09 13:03:37', '57595VIOTI'),
+(126, 11, 28, 't4', '2018-07-09 13:03:37', '57595VIOTI'),
+(127, 14, 20, 't3', '2018-07-09 13:04:30', '78118QOZLJ');
 
 -- --------------------------------------------------------
 
@@ -152,6 +177,7 @@ CREATE TABLE IF NOT EXISTS `livraison` (
 DROP TABLE IF EXISTS `musique`;
 CREATE TABLE IF NOT EXISTS `musique` (
   `id_musique` int(11) NOT NULL AUTO_INCREMENT,
+  `code_article` varchar(64) NOT NULL,
   `id_artiste` int(11) NOT NULL,
   `nom_artiste` varchar(64) NOT NULL,
   `categorie_artiste` varchar(64) NOT NULL,
@@ -161,24 +187,26 @@ CREATE TABLE IF NOT EXISTS `musique` (
   `description_musique` text NOT NULL,
   `pochette` varchar(200) NOT NULL,
   PRIMARY KEY (`id_musique`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `musique`
 --
 
-INSERT INTO `musique` (`id_musique`, `id_artiste`, `nom_artiste`, `categorie_artiste`, `prix_vinyl`, `prix_cassette`, `nom_album`, `description_musique`, `pochette`) VALUES
-(2, 1, 'Indochine', 'Rock', 20, 20, 'Station 13', '«Station 13» est le 3ème single du nouvel album d’Indochine «13» déjà certifié Triple Disque de Platine.\r\nIndochine est actuellement en tournée dans toute la France !', ''),
-(3, 3, 'Mylène Farmer', 'Pop', 20, 20, 'Beyond my control', 'Réédition à l’identique du maxi 45 tours vinyle de Mylène Farmer.\r\nBeyond My control sortie en 1992, tiré du de l’album L’autre.', ''),
-(4, 4, 'Noir Desir', 'Rock', 10, 20, 'One trip one nose', 'Réédition vinyle en exclusivité Fnac : En 1998, après avoir enregistré cinq albums en studio, Noir Désir confiait les bandes de ces enregistrements à divers artistes. De cette expérience naitra un album de remixes des titres du groupe revisités par des musiciens inspirés. Retrouvez réédité le Maxi-vinyl de l\'époque !', ''),
-(5, 5, 'Jane Birkin', 'Pop', 18, 23, 'Together forever', 'Tel un phénix de l’industrie musicale, le disque vinyle connaît depuis une dizaine d’années un retour en force. Jouez pick-ups, résonnez platines : nos chères galettes noires ont désormais retrouvé leur place chez tous les amateurs de musique. Accessibles, pop et raffinés, les 45 et 33 tours vivent leur seconde jeunesse. Retour sur les avantages de ce support', ''),
-(6, 1, 'Indochine', 'Rock', 20, 18, 'L\'Aventurier', 'Stéphane Sirkis, frère jumeau de Nicola, rejoint officiellement le groupe et, en avril 1982, ils assurent les premières parties de Depeche Mode et de la tournée de Taxi Girl. L\'engouement pour Indochine prend de l\'ampleur à chaque passage sur scène, à tel point que le manager de Taxi Girl décide de les déprogrammer de la tournée, craignant qu\'ils ne fassent de l\'ombre à son propre groupe6. Indochine enregistre alors son premier album L\'Aventurier qui sort le 15 novembre. Le single du même nom, référence à l\'univers de Bob Morane de l\'auteur belge Henri Vernes, fait un véritable carton durant l\'été 1983 en s\'écoulant à 500 000 exemplaires7. L\'album s\'écoule quant à lui à plus de 250 000 exemplaires8. La presse s\'enthousiasme et décerne au groupe le Bus d\'Acier 1983, qui récompensait alors les artistes de la scène rock.', ''),
-(8, 3, 'Mylène Farmer', 'Pop', 10, 20, 'Ainsi soit je...', 'Ainsi soit je... est le tout premier Disque de diamant (plus d’un million de ventes) obtenu par une femme et frôle aujourd\'hui les 2 millions d\'exemplaires.5 Il est l\'album féminin le plus vendu en France dans les années 1980.6 Ce record ne sera brisé que par Farmer elle-même en 1991 avec son album suivant, L’Autre…, qui dépassera les deux millions d\'exemplaires.', ''),
-(9, 4, 'Noir Desir', 'Rock', 15, 17, '666.667 Club', '666.667 Club est le cinquième album studio du groupe de rock français Noir Désir, sorti en 1996. La musique s\'y fait plus calme que sur l\'album précédent et l\'accent est mis sur les textes avec certains morceaux intimistes et d\'autres abordant des thèmes politiques ou sociaux qui donnent à Noir Désir son étiquette de groupe engagé. L\'album est le plus grand succès commercial du groupe jusqu\'alors, obtenant un double disque de platine en France.', ''),
-(10, 8, 'Orelsan', 'Rap', 20, 22, 'La fête est finie', 'Premier album produit par Skread (Booba, Diam\'s, Nessbeal...).\r\nDu binge drinking au rap by shooting, le jeune rappeur Orelsan est l\'émanation de cette génération, renfermée sur elle-même, réfugiée dans les addictions, à la recherche répétée du borderline. D\'un point de vue sociologique, on a beaucoup à apprendre des textes d\'Orelsan, guide improbable le temps d\'un album, \" Perdu D\'Avance \".\r\n\" Orelsan, 25 ans, 14 d\'âge mental. Rappeur, craqueur sous pression, amateur de films amateurs, président de ton club d\'échecs \".\r\nSon premier album va faire trembler les bacs bien tranquilles de vos disquaires. Avec des titres déroutants, histoires de fous, histoires floues, ou simplement histoires \" de vous \".\r\nBienvenue dans un univers alambiqué, wifi connecté. Un album entier pour éviter de se mettre une balle dans la tête, ou d\'en mettre dans celles des autres.', ''),
-(11, 6, 'I AM', 'Rap', 35, 20, 'L\'école du micro d\'argent', 'L\'album a été enregistré en partie aux États-Unis, avec des influences de RZA, membre du Wu-Tang Clan.\r\n\r\nLes textes de l\'album sont souvent considérés comme d\'une rare finesse par comparaison avec l\'essentiel de la scène du rap français[réf. nécessaire]. Peu de rappeurs sont parvenus à aborder les thèmes sociaux avec autant de justesse. Ce sont des textes sérieux, graves, accompagnés de jeux extrêmement sophistiqués sur les sonorités du langage (par exemple, Chez le mac est un hymne à la poésie déguisé en biographie de proxénète), qui atteignent leur acmé sur la dernière chanson de l\'album, Demain, c\'est loin, portrait de la vie des cités s\'étendant sur près de 9 minutes. Sobre, sans refrain, ce morceau, aujourd\'hui l\'un des plus célèbres du rap français, repose sur un seul échantillon musical d\'une dizaine de secondes répété en boucle. Ce morceau a même été élu par les internautes du site Abcdr du son, meilleur classique du rap français dans un classement établissant les 100 premiers2. Au moins trois chansons de l\'album parlent de prostitution, mais en alliant une touche amusante et ironique à un réalisme sombre et violent.', ''),
-(12, 7, 'Sexion d\'Assaut', 'Rap', 25, 10, 'L\'apogée', 'Le groupe le plus vendeur du rap français actuel mais aussi le plus critiqué annonce depuis un an cette fameuse apogée, précédée d\'un album d\'inédits. Avec un tel titre, il faut être à la hauteur. Après les premiers singles ultra-efficaces sur leur parcours, distillés ici et là, « Mets pas celle-là » et « Disque d\'or », l\'album contient encore une série de titres faits pour rester longtemps en tête. Le groupe a donc beaucoup travaillé le son, pour que chaque titre soit un single en puissance. Évidemment autotune et électro font leur apparition (« Africain », « Wati house »).', ''),
-(13, 7, 'Sexion d\'Assaut', 'Rap', 15, 15, 'Éternel insatisfait', 'Après 800 000 copies vendues de son album \" Les yeux plus gros que le monde \", Black M revient avec \" Eternel insatisfait \", un album riche aux multiples influences. Cet album marque une belle évolution de sa carrière musicale ! Le rappeur de la Sexion D\'Assaut frappe un grand coup, et lance le compte à rebours de son second album solo avec son single \" Je suis chez moi \". Que trouve-t-on dans cet album ? Tout ce qui a fait le succès de cet artiste inclassable : du flow et de la mélodie. Black M évoque divers sujets, s\'interroge. Il explore de nouveaux territoires musicaux sans perdre son identité. Celle d\'un rappeur issu d\'un des groupes de rap les plus populaire qui sait trouver les mots justes quand il est éloigné de son crew. \" Même avec du monde, je me sens seul \" : Alpha Diallo, alias Black M, prouve avec ce nouvel opus qu\'il est prêt pour une carrière au long cours.', '');
+INSERT INTO `musique` (`id_musique`, `code_article`, `id_artiste`, `nom_artiste`, `categorie_artiste`, `prix_vinyl`, `prix_cassette`, `nom_album`, `description_musique`, `pochette`) VALUES
+(2, 'e1', 1, 'Indochine', 'Rock', 35, 20, 'Station 13', '«Station 13» est le 3ème single du nouvel album d’Indochine «13» déjà certifié Triple Disque de Platine.\r\nIndochine est actuellement en tournée dans toute la France !', 'visunon.jpg'),
+(3, 't4', 3, 'Mylène Farmer', 'Pop', 28, 20, 'Beyond my control', 'Réédition à l’identique du maxi 45 tours vinyle de Mylène Farmer.\r\nBeyond My control sortie en 1992, tiré du de l’album L’autre.', 'visunon.jpg'),
+(4, 'e4', 4, 'Noir Desir', 'Rock', 10, 20, 'One trip one nose', 'Réédition vinyle en exclusivité Fnac : En 1998, après avoir enregistré cinq albums en studio, Noir Désir confiait les bandes de ces enregistrements à divers artistes. De cette expérience naitra un album de remixes des titres du groupe revisités par des musiciens inspirés. Retrouvez réédité le Maxi-vinyl de l\'époque !', 'visunon.jpg'),
+(5, 't1', 5, 'Jane Birkin', 'Pop', 18, 23, 'Together forever', 'Tel un phénix de l’industrie musicale, le disque vinyle connaît depuis une dizaine d’années un retour en force. Jouez pick-ups, résonnez platines : nos chères galettes noires ont désormais retrouvé leur place chez tous les amateurs de musique. Accessibles, pop et raffinés, les 45 et 33 tours vivent leur seconde jeunesse. Retour sur les avantages de ce support', 'visunon.jpg'),
+(6, 't3', 1, 'Indochine', 'Rock', 20, 18, 'L\'Aventurier', 'Stéphane Sirkis, frère jumeau de Nicola, rejoint officiellement le groupe et, en avril 1982, ils assurent les premières parties de Depeche Mode et de la tournée de Taxi Girl. L\'engouement pour Indochine prend de l\'ampleur à chaque passage sur scène, à tel point que le manager de Taxi Girl décide de les déprogrammer de la tournée, craignant qu\'ils ne fassent de l\'ombre à son propre groupe6. Indochine enregistre alors son premier album L\'Aventurier qui sort le 15 novembre. Le single du même nom, référence à l\'univers de Bob Morane de l\'auteur belge Henri Vernes, fait un véritable carton durant l\'été 1983 en s\'écoulant à 500 000 exemplaires7. L\'album s\'écoule quant à lui à plus de 250 000 exemplaires8. La presse s\'enthousiasme et décerne au groupe le Bus d\'Acier 1983, qui récompensait alors les artistes de la scène rock.', 'visunon.jpg'),
+(8, 'e8', 3, 'Mylène Farmer', 'Pop', 12, 20, 'Ainsi soit je...', 'Ainsi soit je... est le tout premier Disque de diamant (plus d’un million de ventes) obtenu par une femme et frôle aujourd\'hui les 2 millions d\'exemplaires.5 Il est l\'album féminin le plus vendu en France dans les années 1980.6 Ce record ne sera brisé que par Farmer elle-même en 1991 avec son album suivant, L’Autre…, qui dépassera les deux millions d\'exemplaires.', 'visunon.jpg'),
+(9, 'd1', 4, 'Noir Desir', 'Rock', 15, 17, '666.667 Club', '666.667 Club est le cinquième album studio du groupe de rock français Noir Désir, sorti en 1996. La musique s\'y fait plus calme que sur l\'album précédent et l\'accent est mis sur les textes avec certains morceaux intimistes et d\'autres abordant des thèmes politiques ou sociaux qui donnent à Noir Désir son étiquette de groupe engagé. L\'album est le plus grand succès commercial du groupe jusqu\'alors, obtenant un double disque de platine en France.', 'visunon.jpg'),
+(10, 'd2', 8, 'Orelsan', 'Rap', 21, 22, 'La fête est finie', 'Premier album produit par Skread (Booba, Diam\'s, Nessbeal...).\r\nDu binge drinking au rap by shooting, le jeune rappeur Orelsan est l\'émanation de cette génération, renfermée sur elle-même, réfugiée dans les addictions, à la recherche répétée du borderline. D\'un point de vue sociologique, on a beaucoup à apprendre des textes d\'Orelsan, guide improbable le temps d\'un album, \" Perdu D\'Avance \".\r\n\" Orelsan, 25 ans, 14 d\'âge mental. Rappeur, craqueur sous pression, amateur de films amateurs, président de ton club d\'échecs \".\r\nSon premier album va faire trembler les bacs bien tranquilles de vos disquaires. Avec des titres déroutants, histoires de fous, histoires floues, ou simplement histoires \" de vous \".\r\nBienvenue dans un univers alambiqué, wifi connecté. Un album entier pour éviter de se mettre une balle dans la tête, ou d\'en mettre dans celles des autres.', 'visunon.jpg'),
+(11, 'd3', 6, 'I AM', 'Rap', 39, 20, 'L\'école du micro d\'argent', 'L\'album a été enregistré en partie aux États-Unis, avec des influences de RZA, membre du Wu-Tang Clan.\r\n\r\nLes textes de l\'album sont souvent considérés comme d\'une rare finesse par comparaison avec l\'essentiel de la scène du rap français[réf. nécessaire]. Peu de rappeurs sont parvenus à aborder les thèmes sociaux avec autant de justesse. Ce sont des textes sérieux, graves, accompagnés de jeux extrêmement sophistiqués sur les sonorités du langage (par exemple, Chez le mac est un hymne à la poésie déguisé en biographie de proxénète), qui atteignent leur acmé sur la dernière chanson de l\'album, Demain, c\'est loin, portrait de la vie des cités s\'étendant sur près de 9 minutes. Sobre, sans refrain, ce morceau, aujourd\'hui l\'un des plus célèbres du rap français, repose sur un seul échantillon musical d\'une dizaine de secondes répété en boucle. Ce morceau a même été élu par les internautes du site Abcdr du son, meilleur classique du rap français dans un classement établissant les 100 premiers2. Au moins trois chansons de l\'album parlent de prostitution, mais en alliant une touche amusante et ironique à un réalisme sombre et violent.', 'visunon.jpg'),
+(12, 'd5', 7, 'Sexion d\'Assaut', 'Rap', 25, 10, 'L\'apogée', 'Le groupe le plus vendeur du rap français actuel mais aussi le plus critiqué annonce depuis un an cette fameuse apogée, précédée d\'un album d\'inédits. Avec un tel titre, il faut être à la hauteur. Après les premiers singles ultra-efficaces sur leur parcours, distillés ici et là, « Mets pas celle-là » et « Disque d\'or », l\'album contient encore une série de titres faits pour rester longtemps en tête. Le groupe a donc beaucoup travaillé le son, pour que chaque titre soit un single en puissance. Évidemment autotune et électro font leur apparition (« Africain », « Wati house »).', 'visunon.jpg'),
+(13, '7er', 7, 'Sexion d\'Assaut', 'Rap', 13, 15, 'Éternel insatisfait', 'Après 800 000 copies vendues de son album \" Les yeux plus gros que le monde \", Black M revient avec \" Eternel insatisfait \", un album riche aux multiples influences. Cet album marque une belle évolution de sa carrière musicale ! Le rappeur de la Sexion D\'Assaut frappe un grand coup, et lance le compte à rebours de son second album solo avec son single \" Je suis chez moi \". Que trouve-t-on dans cet album ? Tout ce qui a fait le succès de cet artiste inclassable : du flow et de la mélodie. Black M évoque divers sujets, s\'interroge. Il explore de nouveaux territoires musicaux sans perdre son identité. Celle d\'un rappeur issu d\'un des groupes de rap les plus populaire qui sait trouver les mots justes quand il est éloigné de son crew. \" Même avec du monde, je me sens seul \" : Alpha Diallo, alias Black M, prouve avec ce nouvel opus qu\'il est prêt pour une carrière au long cours.', 'visunon.jpg'),
+(14, '9erd', 10, 'Marc lavoine', 'Pop', 18, 20, 'Je reviens a toi', 'Marc lavoine album', 'Marc-Lavoine-je-reviens-à-toi.jpg'),
+(15, 'hjf4', 11, 'Axel Bauer', 'Pop', 25, 10, 'Bad Cowboy', 'Il est accompagné de Franck Pilant à la guitare avec lequel il compose, du batteur Geoff Dugmore et du bassiste Gabriel Barry. Le disque est enregistré « live » en Irlande au studio Grouse lodge. Pour le clip de Tu me Tues, les musiciens incarnent une bande de cowboys urbains pénétrant dans la ville à cheval.', 'badcoboy.jpg');
 
 -- --------------------------------------------------------
 
