@@ -82,6 +82,6 @@ w.document.close();
 function help()
 {
 w=open('','topic','width=350,height=200,resizable=no');
-w.document.write("1. Si vous avez besoin d'aide, veuillez nous contacter au 01.01.01.01.01");
+w.document.write("1. Si vous avez besoin d'aide, veuillez nous contacter au XX.XX.XX.XX.XX");
 w.document.close();
 }
