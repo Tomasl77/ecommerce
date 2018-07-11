@@ -77,7 +77,7 @@ if(!empty($_POST))
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="../index.css">
-  <title>La Boite à musique</title>
+  <title>Inscription - La Boite à musique</title>
 </head>
 <body>
   <div class="inscrimage">
@@ -134,7 +134,7 @@ if(!empty($_POST))
               <br>                   
               <label>* Tel :</label>
               <br>
-              <input class="input" type="tel" name="Tel" placeholder="Tel" value="<?php if (isset($Tel)) echo $Tel; ?>" maxlength="10" required>  
+              <input class="input" type="tel" name="Tel" title="10 chiffres maximum"placeholder="Tel (10 chiffres)" value="<?php if (isset($Tel)) echo $Tel; ?>" maxlength="10" required>  
               <br>
             </div>
           </div>

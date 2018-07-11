@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+.mts{
+  font-family: 'Montserrat', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
 /* ----------------------------------- /
 / ---------- Global corps ---------- /
 / ----------------------------------- */
@@ -5,7 +12,7 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
 
 html, body{
@@ -29,11 +36,12 @@ html, body{
   width: 50%;
   margin: auto;
   list-style: none;
+  font-family: 'Merriweather', serif !important;
 }
 
 .pointer{
   cursor: pointer;
-  
+
 }
 /* ----------------------------------- /
 / ------------- NavBar------------- /
@@ -173,13 +181,13 @@ html, body{
 #btn-inscr{
   width: 30%;
 }
- #infoper{
-  border: 2px solid blue;
+/*  #infoper{
+ border: 2px solid blue;
 }
 
 #infociv{
-  border: 2px solid orange;
-  }
+ border: 2px solid orange;
+ } */
 
   /* Form Input */
   input {
@@ -243,33 +251,39 @@ html, body{
 / ----------- Profil ---------------- /
 / ----------------------------------- */
 
+
 .profrow{
   flex: 1;
   flex-direction: row;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display:flex;
+  margin-top: 3%;
 }
 
 .colprof{
   flex-direction: column;
   flex: 1;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .prof1 button{
   color: white;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .butdelete{
   background-color: brown;
 }
+
 .butdelete:hover{
   background-color: red !important;
 }
+
 .butdelete:focus{
   border-color: transparent; 
 }
+
 .butest{
   display: flex;
   justify-content: center;
@@ -337,7 +351,7 @@ hr {
 .album{
   width: 70%;
   height:500px;
-  border: 5px solid red;
+  /* border: 5px solid red; */
   position: relative;
   top:5%;
   left: 5%;
@@ -425,8 +439,7 @@ hr {
   width: 100%;
   top: 5%;
   position: relative;
-  border: 2px solid red;
-  z-index: 2
+  /* border: 2px solid red; */
 }
 
 #panier{
@@ -434,7 +447,7 @@ hr {
   top: 5%;
   height: 500px;
   width: 70%;
-  border: 2px solid blue;
+  border: 3px solid lightgrey;
   position: relative;
   overflow: scroll;
   overflow-x: hidden;
@@ -445,7 +458,7 @@ hr {
   text-decoration: none;
 }
 .panierentete{
-  border: 2px solid green;
+  /* border: 2px solid green; */
   width: 100%;
   height: 10%;
   text-align: center;
@@ -485,7 +498,7 @@ hr {
 
 
 #tablecommandecontainer{
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   width: 100%;
   height: 550px;
   position: relative;
@@ -494,7 +507,7 @@ hr {
 #tablecommande{
   width: 80%;
   height: 450px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   margin-left: 50%;
   margin-top: 10px;
   transform: translateX(-50%); 

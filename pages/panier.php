@@ -42,7 +42,7 @@ if(!empty($_GET["action"]))
 	<div class="wrapper">
 		<?php require_once("../includes/navbar.php"); ?>
 		<div class="basketcontainer">
-			<div id="panier">
+			<div id="panier" class="mts">
 				<div class="panierentete"><span>MON PANIER</span> <span id="vider"><a href="panier.php?action=empty">Vider le panier</a></span></div>
 
 				<form action="valipani.php" method="POST">
@@ -58,7 +58,7 @@ if(!empty($_GET["action"]))
 									<th>Artiste</th>
 									<th>Quantité</th>
 									<th>Prix vinyl</th>
-									<th>E</th>
+									<th></th>
 								</tr>	
 								<?php
 								foreach ($_SESSION["cart_item"] as $item){
@@ -67,7 +67,7 @@ if(!empty($_GET["action"]))
 										<td><strong><?php echo $item["nom_album"]; ?></strong></td>
 										<td><?php echo $item["nom_artiste"]; ?></td>
 										<td><?php echo $item["quantity"]; ?></td>
-										<td><?php echo "$".$item["prix_vinyl"]; ?></td>
+										<td><?php echo $item["prix_vinyl"]." €"; ?></td>
 										<td><a href="panier.php?action=remove&code_article=<?php echo $item["code_article"]; ?>">Retirer du caddie</a></td>
 									</tr>
 									<?php
@@ -86,7 +86,13 @@ if(!empty($_GET["action"]))
 					{
 						echo '<div class="plzco">Veuillez vous connecter pour valider votre panier.</div><a href="/commerce/E/index.php"><button class=\'panierbut\'>Se connecter</button></a>';
 						exit;
-					}else{echo "<button type='submit' class='panierbut'>Valider son panier </button>"; }?>
+					}else{
+						if (!empty($_SESSION['cart_item'])) {
+							echo "<button type='submit' class='panierbut'>Valider son panier </button>"; 
+						}else{
+							echo"Votre panier est vide";
+						}
+					}?>
 					
 				</form>
 			</div>

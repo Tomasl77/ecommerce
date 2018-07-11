@@ -63,3 +63,25 @@ w.document.write("1. Tarifs : <br /> Nos Tarifs sont indiqués à sur la pages d
 w.document.close();
 }
 
+
+function tarif()
+{
+w=open('','topic','width=350,height=200,resizable=no');
+w.document.write("1. Tarifs : <br /> Nos Tarifs sont indiqués à sur la pages de chaque produits. <br /><br />Livraison : <br />Le tarif de livraison est unique. Il s'élève à 3€ si le montant est inférieur a 30€ d'achat, et est gratuit si l'achat est supérieur ou égal a 30€. ");
+w.document.close();
+}
+
+
+function retour()
+{
+w=open('','topic','width=350,height=200,resizable=no');
+w.document.write("1. Retour : <br /> Vous avez 15 jours pour vous rétracter <br /><br /> 2. Remboursements : Vous serez remboursé sous 7 jours a compter de la reception du produit retourné.");
+w.document.close();
+}
+
+function help()
+{
+w=open('','topic','width=350,height=200,resizable=no');
+w.document.write("1. Si vous avez besoin d'aide, veuillez nous contacter au 01.75.58.48.21");
+w.document.close();
+}

@@ -75,7 +75,7 @@ $random_string = chr(rand(65,90)) . chr(rand(65,90)) . chr(rand(65,90)) . chr(ra
     require_once("../includes/navbar.php");
     ?>
 
-    <div class="profrow">
+    <div class="profrow mts">
       <div class="colprof prof1">Votre adresse de livraison : <br><br><?= $pf['nom_client'] ?>		<?= $pf['prenom_client'] ?> <br>	<?= $pf['adresse_client'] ?><br><?= $pf['cp_client'] ?>		<?= $pf['ville_client'] ?><br><br><br>
 
        <div class="butest">
@@ -136,7 +136,12 @@ $random_string = chr(rand(65,90)) . chr(rand(65,90)) . chr(rand(65,90)) . chr(ra
   </span>
 </div>
 </div>
-<div class="colprof prof2">Panier en cours <br><br></div>
+<div class="colprof prof2">Panier en cours <br><br>
+  <?php
+  if(isset($_SESSION['cart_item']))
+  foreach ($_SESSION["cart_item"] as $item){
+    echo $item['nom_album'].' x '.$item['quantity'].'<br>';
+  } ?></div>
 <div class="colprof prof3">Précédents achats <br><br>
   <?php if($achat >0)
   {

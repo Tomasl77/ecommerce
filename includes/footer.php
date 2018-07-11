@@ -12,8 +12,8 @@
       <ul>
         <li class="pointer" onclick="faq()">F.A.Q</li>
         <li class="pointer" onclick="tarif()">Tarifs et option de livraison</li>
-        <li class="pointer">Retours / Remboursements</li>
-        <li class="pointer">Aide</li>
+        <li class="pointer" onclick="retour()">Retours / Remboursements</li>
+        <li class="pointer" onclick= "help()">Aide</li>
       </ul>
     </span>
   </div>
