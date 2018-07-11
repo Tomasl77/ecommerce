@@ -8,45 +8,7 @@ require_once("../includes/includes.php");
 	exit;
 }
 */
-$musi = $DB-> query("SELECT * FROM musique WHERE code_article ='" . $_GET["code_article"] . "'");
-$musi = $musi->fetchAll();
 
-foreach ($musi as $msc){
-
-};
-
-if(!empty($_GET["action"])) 
-{
-	switch($_GET["action"]) 
-	{
-		case "add":
-		if(!empty($_POST["quantity"])) {
-			$productByid = $DB->query("SELECT * FROM musique WHERE code_article='" . $_GET["code_article"] . "'");
-			$productByid = $productByid->fetchAll();
-			$itemArray = array($productByid[0]["code_article"]=>array('nom_album'=>$productByid[0]["nom_album"], 'code_article'=>$productByid[0]["code_article"], 'nom_artiste'=>$productByid[0]["nom_artiste"], 'quantity'=>$_POST["quantity"], 'prix_vinyl'=>$productByid[0]["prix_vinyl"]));
-
-			if(!empty($_SESSION["cart_item"])) {
-				if(in_array($productByid[0]["code_article"],$_SESSION["cart_item"])) {
-					foreach($_SESSION["cart_item"] as $k => $v) {
-						if($productByid[0]["code_article"] == $k) {
-							if(empty($_SESSION["cart_item"][$k]["quantity"])) {
-
-								echo '<1h>Empty cart</h1>';
-								$_SESSION["cart_item"][$k]["quantity"] = 0;
-							}
-							$_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
-						}
-					}
-				} else {
-					$_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
-				}
-			} else {
-				$_SESSION["cart_item"] = $itemArray;
-			}
-		}
-		break;
-	}
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,6 +19,8 @@ if(!empty($_GET["action"]))
 	<link rel="stylesheet" href="/commerce/E/index.css">
 </head>
 <body>
+
+
 	
 	<?php require_once ('../includes/bande_son.php'); ?>
 	
@@ -65,6 +29,55 @@ if(!empty($_GET["action"]))
 		<?php require_once("../includes/navbar.php"); ?>
 
 		<div class="album">
+
+
+
+			<?php 
+
+			$musi = $DB-> query("SELECT * FROM musique WHERE code_article ='" . $_GET["code_article"] . "'");
+			$musi = $musi->fetchAll();
+
+			foreach ($musi as $msc){
+
+			};
+
+			if(!empty($_GET["action"])) 
+			{
+				switch($_GET["action"]) 
+				{
+					case "add":
+
+
+					if(!empty($_POST["quantity"])) {
+						$productByid = $DB->query("SELECT * FROM musique WHERE code_article='" . $_GET["code_article"] . "'");
+						$productByid = $productByid->fetchAll();
+						$itemArray = array($productByid[0]["code_article"]=>array('nom_album'=>$productByid[0]["nom_album"], 'code_article'=>$productByid[0]["code_article"], 'nom_artiste'=>$productByid[0]["nom_artiste"], 'quantity'=>$_POST["quantity"], 'prix_vinyl'=>$productByid[0]["prix_vinyl"]));
+
+						if(!empty($_SESSION["cart_item"])) {
+							foreach($_SESSION["cart_item"] as $k => $v) {
+								
+								if($productByid[0]["code_article"] == $v["code_article"]) {
+									if(empty($v["quantity"])) {
+
+										echo '<1h>Empty cart</h1>';
+										$v["quantity"] = 0;
+									}
+									$sum = $v["quantity"] + $_POST["quantity"];
+									$_SESSION["cart_item"][$k]["quantity"] = $sum;
+									
+									
+								} else {
+									$_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
+								}
+							}
+						} else {
+							$_SESSION["cart_item"] = $itemArray;
+						}
+					}
+					break;
+				}
+			}
+			?>
 			<div class="titrealbum">
 				<h4>Album : <?php echo $msc['nom_album']?></h4>
 				<h5>Interprète : <?php echo $msc['nom_artiste']?></h5>
@@ -81,16 +94,16 @@ if(!empty($_GET["action"]))
 		<!-- 	<div id="prixvin">
 				<p>Prix de la cassette: <br><?php echo $msc['prix_cassette']. "€" ?> <div class="ajoutpanier"><button type="button">Ajouter au panier</button></div></p>
 			</div>
-		<-->	<div id="prixcas">
+			<-->	<div id="prixcas">
 				<form method="post" action="descriproducts.php?action=add&code_article=<?php echo $msc['code_article']; ?>">
-					<p>Prix du vinyl: <br><?php echo $msc['prix_vinyl']. "€" ?><div class="ajoutpanier"><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="Ajouter au panier"/></div></p>
+					<p>Prix du vinyl: <br><?php echo $msc['prix_vinyl']. "€" ?><div class="ajoutpanier"><input type="text" name="quantity" value="1" size="2" /><button type="submit" value="Ajouter" id="ajouterpanier"/>Ajouter</button></div></p>
 				</form>
-				</div>
 			</div>
 		</div>
-<!-- <a href="./admin.php"><button type="button" name="Admin">Admin</button></a> -->
-<?php  require_once("../includes/footer.php");?>
 	</div>
+	<!-- <a href="./admin.php"><button type="button" name="Admin">Admin</button></a> -->
+	<?php  require_once("../includes/footer.php");?>
+</div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

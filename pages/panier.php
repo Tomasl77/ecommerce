@@ -2,11 +2,7 @@
 session_start();
 require_once("../includes/includes.php");
 
-if (!isset($_SESSION['prenom']))
-{
-	header('Location: ../index.php');
-	exit;
-}
+
 
 if(!empty($_GET["action"]))
 {
@@ -50,43 +46,48 @@ if(!empty($_GET["action"]))
 				<div class="panierentete"><span>MON PANIER</span> <span id="vider"><a href="panier.php?action=empty">Vider le panier</a></span></div>
 
 				<form action="valipani.php" method="POST">
-				<?php
-				if(isset($_SESSION["cart_item"]))
-				{
-					$item_total = 0;
-					?>	
-					<table class="table table-dark">
-						<tbody>
-							<tr>
-								<th>Nom de l'album</th>
-								<th>Artiste</th>
-								<th>Quantité</th>
-								<th>Prix vinyl</th>
-								<th>E</th>
-							</tr>	
-							<?php
-							foreach ($_SESSION["cart_item"] as $item){
+					<?php
+					if(isset($_SESSION["cart_item"]))
+					{
+						$item_total = 0;
+						?>	
+						<table class="table table-dark">
+							<tbody>
+								<tr>
+									<th>Nom de l'album</th>
+									<th>Artiste</th>
+									<th>Quantité</th>
+									<th>Prix vinyl</th>
+									<th>E</th>
+								</tr>	
+								<?php
+								foreach ($_SESSION["cart_item"] as $item){
+									?>
+									<tr>
+										<td><strong><?php echo $item["nom_album"]; ?></strong></td>
+										<td><?php echo $item["nom_artiste"]; ?></td>
+										<td><?php echo $item["quantity"]; ?></td>
+										<td><?php echo "$".$item["prix_vinyl"]; ?></td>
+										<td><a href="panier.php?action=remove&code_article=<?php echo $item["code_article"]; ?>">Retirer du caddie</a></td>
+									</tr>
+									<?php
+									$item_total += ($item["prix_vinyl"]*$item["quantity"]);
+								};
 								?>
 								<tr>
-									<td><strong><?php echo $item["nom_album"]; ?></strong></td>
-									<td><?php echo $item["nom_artiste"]; ?></td>
-									<td><?php echo $item["quantity"]; ?></td>
-									<td><?php echo "$".$item["prix_vinyl"]; ?></td>
-									<td><a href="panier.php?action=remove&code_article=<?php echo $item["code_article"]; ?>">Retirer du caddie</a></td>
+									<td colspan="5" align=right><strong>Total:</strong> <?php echo "$".$item_total; ?></td>
 								</tr>
-								<?php
-								$item_total += ($item["prix_vinyl"]*$item["quantity"]);
-							};
-							?>
-							<tr>
-								<td colspan="5" align=right><strong>Total:</strong> <?php echo "$".$item_total; ?></td>
-							</tr>
-						</tbody>
-					</table>		
-					<?php
-				};
-				?>
-				<button type="submit">Valider son panier </button>
+							</tbody>
+						</table>		
+						<?php
+					};
+					
+					if (!isset($_SESSION['prenom']))
+					{
+						echo '<div class="plzco">Veuillez vous connecter pour valider votre panier.</div><a href="/commerce/E/index.php"><button class=\'panierbut\'>Se connecter</button></a>';
+						exit;
+					}else{echo "<button type='submit' class='panierbut'>Valider son panier </button>"; }?>
+					
 				</form>
 			</div>
 		</div>

@@ -45,22 +45,24 @@ html, body{
 / ----------------------------------- */
 
 
-.carousel{
-  position: relative;
-  background-color: blue;
-  border: 5px solid red;
-  margin: auto;
-  width: 50%;
-  height: 500px;
-  margin-top:2%;
+.carousel-item img{
+    width: 100%;
+    height: 400px;
+    padding: 1%;
 }
 
-
-
+.car {
+    margin: 5% auto;
+    border:2px black solid;
+    width: 50%;
+    height: 50%;
+}
 /* ----------------------------------- /
 / ------------- Img Head------------- /
 / ----------------------------------- */
-
+.logo{
+  width: 11%;
+}
 .rowfir{
   position: relative;
   height: 20%;
@@ -344,6 +346,7 @@ hr {
   left: 5%;
   position: absolute;
 }
+
 .pochette{
   width: 300px;
   height: 300px;
@@ -448,8 +451,29 @@ hr {
   float: right;
 }
 
+.panierbut{
+  color: blue;
+  width: 30%;
+  padding: 2% 7%;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
 
+.plzco{
+  width: 40%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
 
+#ajouterpanier{
+  margin:auto;
+  margin-top:5px; 
+  width: 100%;
+}
 /*----------------------------------/
 /---------  FORMER ORDER  ----------/
 /----------------------------------*/

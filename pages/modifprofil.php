@@ -19,7 +19,7 @@ if(!empty($_POST))
   $Villen = htmlspecialchars(ucfirst(trim($Villen)));
   if($valid)
   { 
-  $DB->update('UPDATE client SET adresse_client ="'.$Adressen.'",cp_client ="'.$Cpn.'",ville_client="'.$Villen.'" WHERE id_client="'.$_SESSION["id"] .'"');
+    $DB->update('UPDATE client SET adresse_client ="'.$Adressen.'",cp_client ="'.$Cpn.'",ville_client="'.$Villen.'" WHERE id_client="'.$_SESSION["id"] .'"');
 
     header('Location: ../pages/profil.php');
     exit;  
@@ -38,60 +38,60 @@ if(!empty($_POST))
 <body>
 
   <?php 
-    require_once ('../includes/bande_son.php');
+  require_once ('../includes/bande_son.php');
   ?>
 
   <div class="wrapper">
     <?php
-      require_once("../includes/navbar.php");
+    require_once("../includes/navbar.php");
     ?>
 
-  <div class="inscrimage">
-    <div class="inscription">
-      <?php 
-      if(isset($_SESSION['flash']))
-      { 
-        foreach($_SESSION['flash'] as $type => $message): 
-        endforeach;
-        unset($_SESSION['flash']);
-      }
-      ?> 
-      <div class="formulaire">
-        <h1 class="index-h1">Modif Profil</h1>
-        <form method="post" action="modifprofil.php">
-          <div class="s125">
-            <div id="infoper" class="blok">
-              <br>
-              <div id="infociv" class="blok">
-              <label>* Adresse :</label>
-              <br>
-              <input class="input" type="text" name="Adressen" placeholder="Nouvelle adresse" value="<?php if (isset($Adressen)) echo $Adressen; ?>" maxlength="20" required>  
-              <br>                                  
-              <label>* Ville :</label>
-              <br>
-              <input class="input" type="text" name="Villen" placeholder="Nouvelle ville" value="<?php if (isset($Villen)) echo $Villen; ?>" maxlength="20" required>  
-              <br>
-              <label>* Code Postal :</label>
-              <br>
-              <input class="input" type="number" name="Cpn" placeholder="Nouveau CP" value="<?php if (isset($Cpn)) echo $Cpn; ?>" maxlength="5" required>  
-              <br>
-              <br>
+    <div class="inscrimage">
+      <div class="inscription">
+        <?php 
+        if(isset($_SESSION['flash']))
+        { 
+          foreach($_SESSION['flash'] as $type => $message): 
+          endforeach;
+          unset($_SESSION['flash']);
+        }
+        ?> 
+        <div class="formulaire">
+          <h1 class="index-h1">Modif Profil</h1>
+          <form method="post" action="modifprofil.php">
+            <div class="s125">
+              <div id="infoper" class="blok">
+                <br>
+                <div id="infociv" class="blok">
+                  <label>* Adresse :</label>
+                  <br>
+                  <input class="input" type="text" name="Adressen" placeholder="Nouvelle adresse" value="<?php if (isset($Adressen)) echo $Adressen; ?>" maxlength="20" required>  
+                  <br>                                  
+                  <label>* Ville :</label>
+                  <br>
+                  <input class="input" type="text" name="Villen" placeholder="Nouvelle ville" value="<?php if (isset($Villen)) echo $Villen; ?>" maxlength="20" required>  
+                  <br>
+                  <label>* Code Postal :</label>
+                  <br>
+                  <input class="input" type="number" name="Cpn" placeholder="Nouveau CP" value="<?php if (isset($Cpn)) echo $Cpn; ?>" maxlength="5" required>  
+                  <br>
+                  <br>
+                </div>
               </div>
             </div>
+          </form>
+          <div id="inscribot">
+            <button id="btn-inscr" type="submit">Modifier</button>
+            <p>Retour à l'<a href="../index.php">accueil !</a></p>  
           </div>
-        </form>
-        <div id="inscribot">
-          <button id="btn-inscr" type="submit">Modifier</button>
-          <p>Retour à l'<a href="../index.php">accueil !</a></p>  
         </div>
       </div>
+      
+      <?php  require_once("../includes/footer.php");?>
     </div>
-    
-    <?php  require_once("../includes/footer.php");?>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  <script src="./index.js"></script>
-</body>
-</html>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+  </html>

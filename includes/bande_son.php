@@ -1,6 +1,8 @@
 <a href="/commerce/E/pages/page_acceuil.php">
-		<div class="rowfir">
-			<div id="titrentete">La boite à musique</div>
+		<div class="rowfir" alt="Animation de la Bande son">
+			<div id="titrentete">
+				<img class = "logo" src="/commerce/E/images/cle.png" alt="Logo_Cle vinyl">
+			</div>
 			<div class="rowA">
 				<div class="bs"></div>
 				<div class="bs"></div>

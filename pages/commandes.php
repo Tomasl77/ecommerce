@@ -37,8 +37,8 @@ foreach ($commande as $cd) {
 				</div>
 				<div>
 					<?php foreach ($commande as $cd) {
-		echo $cd['nom_album']." :  ".$cd['nom_artiste'].' Prix :'.$cd['prix_vinyl'].'€'.'<br> <br>';
-	}  ?>
+						echo $cd['nom_album']." :  ".$cd['nom_artiste'].' Prix :'.$cd['prix_vinyl'].'€'.'<br> <br>';
+					}  ?>
 				</div>
 			</div>
 		</div>

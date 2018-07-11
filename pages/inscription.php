@@ -83,8 +83,8 @@ if(!empty($_POST))
   <div class="inscrimage">
     <div class="inscription">
       <form method="post" action="inscription.php">
-      <div class="formulaire">
-        <h1 class="index-h1">Inscription</h1>
+        <div class="formulaire">
+          <h1 class="index-h1">Inscription</h1>
           <div class="s125">
             <div id="infoper" class="blok">
               <label>* Nom :</label>
@@ -138,16 +138,16 @@ if(!empty($_POST))
               <br>
             </div>
           </div>
-        
-        <div id="inscribot">
-          <button class="butinscri"id="btn-inscr" type="submit">S'inscrire</button>
-          <p>Retour à l'<a href="../index.php">accueil !</a></p>  
-        
-      </div>
+          
+          <div id="inscribot">
+            <button class="butinscri"id="btn-inscr" type="submit">S'inscrire</button>
+            <p>Retour à l'<a href="../index.php">accueil !</a></p>  
+            
+          </div>
 
-      </div>
-      
-        </form>
+        </div>
+        
+      </form>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
