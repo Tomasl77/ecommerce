@@ -37,7 +37,7 @@ require_once("../includes/includes.php");
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img class="d-block w-100" src="/commerce/E/images/cle2.png" alt="Première image : Logo boite a musique">
+						<img class="d-block w-100" src="/commerce/E/images/krou.jpg" alt="Première image : Logo boite a musique">
 					</div>
 					<div class="carousel-item">
 						<img class="d-block w-100" src="/commerce/E/images/1.jpg" alt="Second slide">
