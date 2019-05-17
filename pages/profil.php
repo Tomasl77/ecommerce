@@ -47,7 +47,7 @@ $commande = $DB->query("SELECT * FROM commande INNER JOIN musique ON commande.co
 $commande = $commande->fetchAll();
 
 foreach ($commande as $cd) {
-  
+
 };
 
 
@@ -139,18 +139,19 @@ $random_string = chr(rand(65,90)) . chr(rand(65,90)) . chr(rand(65,90)) . chr(ra
 <div class="colprof prof2">Panier en cours <br><br>
   <?php
   if(isset($_SESSION['cart_item']))
-  foreach ($_SESSION["cart_item"] as $item){
-    echo $item['nom_album'].' x '.$item['quantity'].'<br>';
-  } ?></div>
-<div class="colprof prof3">Précédents achats <br><br>
-  <?php if($achat >0)
-  {
-    foreach ($commande as $cd)
-      { echo '<a href="commandes.php?num_commande='.$cd['num_commande'].'">'.($cd["num_commande"]).'</a>'.'<br>';
-  }
-}else{
-  echo "Vous n'avez pas passé de commande.";}?>
+    foreach ($_SESSION["cart_item"] as $item){
+      echo $item['nom_album'].' x '.$item['quantity'].'<br>';
+    } ?>
 </div>
+<div class="colprof prof3">Précédents achats <br><br>
+    <?php if($achat >0)
+    {
+      foreach ($commande as $cd)
+        { echo '<a href="commandes.php?num_commande='.$cd['num_commande'].'">'.($cd["num_commande"]).'</a>'.'<br>';
+    }
+  }else{
+    echo "Vous n'avez pas passé de commande.";}?>
+  </div>
 </div>
 
 <?php  require_once("../includes/footer.php");?>

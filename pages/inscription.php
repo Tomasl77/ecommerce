@@ -4,6 +4,7 @@ session_start();
 include_once('../includes/includes.php');
 
 
+//htmlspecialchars est une manière de se protéger des injections SQL.
 if(!empty($_POST))
 {
   extract($_POST);

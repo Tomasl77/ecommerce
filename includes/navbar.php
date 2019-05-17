@@ -6,7 +6,7 @@
     <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
         <ul class="navbar-nav w-100 justify-content-center">
             <li class="nav-item active">
-                <a class="nav-link" href="/commerce/E/pages/products.php"><img src="/commerce/E/icon/Kara.svg" width="42" height="42" alt="Chanson par catégorie"></a>
+                <a class="nav-link" href="/commerce/E/pages/products.php"><img src="/commerce/E/icon/dvd-disc.svg" width="42" height="42" alt="Chanson par catégorie"></a>
             </li>
         </ul>
         <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
